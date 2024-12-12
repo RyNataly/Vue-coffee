@@ -3,38 +3,20 @@
     <ul
       class="header d-flex justify-content-center justify-content-md-start flex-wrap"
     >
-      <li class="header__item">
-        <router-link :to="links[0].link">
-          <img
-            :src="require(`@/assets/logo/${links[0].icon}`)"
-            :alt="links[0].icon"
-          />
-        </router-link>
-      </li>
-      <!-- <li class="header__item">
-        <router-link :to="links[1].link">{{ links[1].text }}</router-link>
-      </li>
-      <li class="header__item">
-        <router-link :to="links[2].link">{{ links[2].text }}</router-link>
-      </li>
-      <li class="header__item">
-        <router-link :to="links[3].link">{{ links[3].text }}</router-link>
-      </li> -->
+      <link-component :link="links.header.link" classItemLink="header__item">
+        <img
+          :src="require(`@/assets/logo/${links.header.icon}`)"
+          :alt="links.header.icon"
+        />
+      </link-component>
+
       <link-component
+        v-for="link in links.other"
+        :key="link.id"
+        :link="link.link"
+        :text="link.text"
         classItemLink="header__item"
-        :link="links[1].link"
-        :text="links[1].text"
-      />
-      <link-component
-        classItemLink="header__item"
-        :link="links[2].link"
-        :text="links[2].text"
-      />
-      <link-component
-        classItemLink="header__item"
-        :link="links[3].link"
-        :text="links[3].text"
-      />
+      ></link-component>
     </ul>
   </header>
 </template>
@@ -46,28 +28,30 @@ export default {
   components: { LinkComponent },
   data() {
     return {
-      links: [
-        {
+      links: {
+        header: {
           id: 0,
           link: "/",
           icon: "Logo.svg",
         },
-        {
-          id: 1,
-          text: "Our coffee",
-          link: "/ourcoffee",
-        },
-        {
-          id: 2,
-          text: "For your pleasure",
-          link: "/yourpleasure",
-        },
-        {
-          id: 3,
-          text: "Contact us",
-          link: "/contacts",
-        },
-      ],
+        other: [
+          {
+            id: 1,
+            text: "Our coffee",
+            link: "/ourcoffee",
+          },
+          {
+            id: 2,
+            text: "For your pleasure",
+            link: "/yourpleasure",
+          },
+          {
+            id: 3,
+            text: "Contact us",
+            link: "/contacts",
+          },
+        ],
+      },
     };
   },
 };
