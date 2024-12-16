@@ -26,33 +26,10 @@ import LinkComponent from "@/components/LinkComponent.vue";
 
 export default {
   components: { LinkComponent },
-  data() {
-    return {
-      links: {
-        header: {
-          id: 0,
-          link: "/",
-          icon: "Logo.svg",
-        },
-        other: [
-          {
-            id: 1,
-            text: "Our coffee",
-            link: "/ourcoffee",
-          },
-          {
-            id: 2,
-            text: "For your pleasure",
-            link: "/yourpleasure",
-          },
-          {
-            id: 3,
-            text: "Contact us",
-            link: "/contacts",
-          },
-        ],
-      },
-    };
+  computed: {
+    links() {
+      return this.$store.getters["getHeaderLinks"];
+    },
   },
 };
 </script>
