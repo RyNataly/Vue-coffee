@@ -116,8 +116,12 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import TitleHeader from "@/components/TitleHeader.vue";
 
-// import { useVuelidate } from "@vuelidate/core";
-// import { required, email } from "@vuelidate/validators";
+import { useVuelidate } from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
+
+import VueCompositionAPI from "@vue/composition-api";
+
+Vue.use(VueCompositionAPI);
 
 export default {
   components: { NavBarComponent, TitleHeader },
