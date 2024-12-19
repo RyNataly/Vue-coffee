@@ -24,7 +24,7 @@
 
             <form @submit.prevent="submit($event)" action="/" class="mt-5">
               <div class="form-group row">
-                <div class="col col-12 col-sm-3 d-flex align-items-center">
+                <div class="col col-12 col-sm-3 d-flex align-items-start">
                   <label for="name-input" class="mb-0">
                     Name
                     <span style="color: red">*</span>
@@ -32,16 +32,19 @@
                 </div>
                 <div class="col col-12 col-sm-9">
                   <input
-                    v-model="form.name"
+                    v-model="name"
                     type="text"
                     class="form-control"
                     id="name-input"
                   />
+                  <!-- <span v-for="error in v$.name.$errors" :key="error.$uid">
+                    {{ error.$message }}
+                  </span> -->
                 </div>
               </div>
 
               <div class="form-group row">
-                <div class="col col-12 col-sm-3 d-flex align-items-center">
+                <div class="col col-12 col-sm-3 d-flex align-items-start">
                   <label for="email-input" class="mb-0">
                     E-mail
                     <span style="color: red">*</span>
@@ -49,30 +52,36 @@
                 </div>
                 <div class="col col-12 col-sm-9">
                   <input
-                    v-model="form.email"
+                    v-model="email"
                     type="email"
                     class="form-control"
                     id="email-input"
                   />
+                  <!-- <span v-for="error in v$.email.$errors" :key="error.$uid">
+                    {{ error.$message }}
+                  </span> -->
                 </div>
               </div>
 
               <div class="form-group row">
-                <div class="col col-12 col-sm-3 d-flex align-items-center">
+                <div class="col col-12 col-sm-3 d-flex align-items-start">
                   <label for="phone-input" class="mb-0"> Phone </label>
                 </div>
                 <div class="col col-12 col-sm-9">
                   <input
-                    v-model="form.phone"
+                    v-model="phone"
                     type="tel"
                     class="form-control"
                     id="phone-input"
                   />
+                  <!-- <span v-for="error in v$.phone.$errors" :key="error.$uid">
+                    {{ error.$message }}
+                  </span> -->
                 </div>
               </div>
 
               <div class="form-group row textarea">
-                <div class="col col-12 d-flex justify-content-center">
+                <div class="col col-12 d-flex justify-content-start">
                   <label for="pmessage" class="mb-3 mt-3 text-center">
                     Your message
                     <span style="color: red">*</span>
@@ -80,7 +89,7 @@
                 </div>
                 <div class="col col-12">
                   <textarea
-                    v-model="form.message"
+                    v-model="message"
                     class="form-control"
                     name="message"
                     id="message"
@@ -107,21 +116,33 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import TitleHeader from "@/components/TitleHeader.vue";
 
+// import { useVuelidate } from "@vuelidate/core";
+// import { required, email } from "@vuelidate/validators";
+
 export default {
   components: { NavBarComponent, TitleHeader },
+  // setup() {
+  //   return { v$: useVuelidate() };
+  // },
   data() {
     return {
-      form: {
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      },
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
     };
   },
+  // validations() {
+  //   return {
+  //     name: { required },
+  //     email: { required, email },
+  //     phone: { required },
+  //     message: {},
+  //   };
+  // },
   methods: {
     submit() {
-      console.log(this.form);
+      // console.log(this.form);
     },
   },
 };

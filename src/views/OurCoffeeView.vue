@@ -71,13 +71,13 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <product-card
-                v-for="coffee in coffees"
-                :key="coffee.id"
-                :title="coffee.title"
-                :price="coffee.price"
-                :img="coffee.img"
+                v-for="card in coffees"
+                :key="card.id"
+                :card="card"
                 classItem="shop__item"
+                @onNavigate="navigate"
               ></product-card>
+              <!-- "/ourcoffee/item" -->
             </div>
           </div>
         </div>
@@ -91,6 +91,8 @@ import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import TitleHeader from "@/components/TitleHeader.vue";
 
+import { navigate } from "../mixins/navigate";
+
 export default {
   components: { NavBarComponent, ProductCard, TitleHeader },
   computed: {
@@ -98,5 +100,11 @@ export default {
       return this.$store.getters["getCoffeeCards"];
     },
   },
+  data() {
+    return {
+      name: "coffees",
+    };
+  },
+  mixins: [navigate],
 };
 </script>
