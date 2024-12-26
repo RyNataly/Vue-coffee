@@ -5,6 +5,7 @@ import links from "./links";
 import coffees from "./coffees";
 import bestsellers from "./bestsellers";
 import goods from "./goods";
+import spinner from "./spinner";
 
 Vue.use(Vuex);
 
@@ -14,6 +15,7 @@ const store = new Vuex.Store({
     bestsellers,
     coffees,
     goods,
+    spinner,
   },
 });
 

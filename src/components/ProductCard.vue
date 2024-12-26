@@ -1,7 +1,7 @@
 <template>
   <div :class="classItem" @click="onEmmit(card.id)">
-    <img :src="require(`@/assets/img/${card.img}`)" :alt="card.img" />
-    <div class="best__item-title">{{ card.title }}</div>
+    <img :src="card.image" :alt="card.image" />
+    <div class="best__item-title">{{ card.name }}</div>
     <div class="best__item-price">{{ card.price }}$</div>
   </div>
 </template>

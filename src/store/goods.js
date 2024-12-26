@@ -41,6 +41,16 @@ const goods = {
       },
     ],
   },
+  mutations: {
+    setGoodsData(state, data) {
+      state.goods = data;
+    },
+  },
+  actions: {
+    setGoodsData({ commit }, data) {
+      commit("setGoodsData", data);
+    },
+  },
   getters: {
     getGoodsCards(state) {
       return state.goods;

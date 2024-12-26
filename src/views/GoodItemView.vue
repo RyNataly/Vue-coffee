@@ -31,19 +31,25 @@
           </div>
         </div>
         <!-- <title-header titleHeader="Our Coffee" /> -->
-        <h1 class="title-big">{{ card.title }}</h1>
+        <h1 class="title-big" v-if="product">{{ product.name }}</h1>
       </div>
     </div>
 
-    <section class="shop">
+    <!-- <section class="shop" v-if="product"> -->
+    <section class="shop" v-if="product">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5 offset-1">
+          <!-- :src="require(`@/assets/img/${card.img}`)" -->
+          <div class="col-lg-5 offset-1" v-if="!isLoading">
             <img
+              v-if="!isLoading"
               class="shop__girl"
-              :src="require(`@/assets/img/${card.img}`)"
               alt="coffee_item"
+              :src="product.image"
             />
+          </div>
+          <div class="col-lg-5 offset-1" v-else>
+            <spinner-component> </spinner-component>
           </div>
           <div class="col-lg-4">
             <div class="title">About it</div>
@@ -54,20 +60,15 @@
             />
             <div class="shop__point">
               <span>Country:</span>
-              Brazil
+              {{ product.country }}
             </div>
             <div class="shop__point">
               <span>Description:</span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              {{ product.description }}
             </div>
             <div class="shop__point">
               <span>Price:</span>
-              <span class="shop__point-price">
-                {{ card.price | addCurrency }}</span
-              >
+              <span class="shop__point-price"> {{ product.price }}</span>
             </div>
           </div>
         </div>
@@ -80,14 +81,32 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import TitleHeader from "@/components/TitleHeader.vue";
+import SpinnerComponent from "@/components/SpinnerComponent.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard, TitleHeader },
-  // filters: {
-  //   addCurrency(value) {
-  //     return value + "$";
-  //   },
-  // },
+  components: { NavBarComponent, ProductCard, TitleHeader, SpinnerComponent },
+  data() {
+    return {
+      product: null,
+    };
+  },
+  beforeMount() {
+    this.$store.dispatch("setIsLoading", true);
+    setTimeout(() => {
+      this.$store.dispatch("setIsLoading", false);
+    }, 1000);
+  },
+  mounted() {
+    const pageProduct = this.pageName === "coffees" ? "coffee" : "goods";
+    fetch(`http://localhost:3000/${pageProduct}/${this.$route.params.id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        this.product = data;
+      });
+  },
+  destroyed() {
+    this.product = null;
+  },
   computed: {
     pageName() {
       return this.$route.name;
@@ -97,6 +116,9 @@ export default {
         this.pageName === "coffees" ? "getCoffeeById" : "getGoodsById";
       // return this.$store.getters["getProductById"](this.$route.params.id);
       return this.$store.getters[pageGetter](this.$route.params.id);
+    },
+    isLoading() {
+      return this.$store.getters["getItsLoading"];
     },
   },
 };

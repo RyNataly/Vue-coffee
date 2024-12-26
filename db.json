@@ -1,0 +1,240 @@
+{
+  "bestsellers": [
+    {
+      "id": 0,
+      "name": "Solimo Coffee Beans 2 kg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/815O9ktyfUL._SL1500_.jpg",
+      "price": "10.73$"
+    },
+    {
+      "id": 1,
+      "name": "Presto Coffee Beans 1 kg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91Ryk2gKejL._SL1500_.jpg",
+      "price": "15.99$"
+    },
+    {
+      "id": 2,
+      "name": "AROMISTICO Coffee 1 kg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg",
+      "price": "6.99$"
+    }
+  ],
+  "coffee": [
+    {
+      "id": "0",
+      "name": "Death Wish Bean",
+      "country": "Brazil",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91DlZZBjxzL._SX522_.jpg",
+      "price": "12.99$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": "1",
+      "name": "AROMISTICO Coffee 1 kg",
+      "country": "Brazil",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg",
+      "price": "6.99$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": "2",
+      "name": "Solimo Coffee Beans 2 kg",
+      "country": "Kenya",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/815O9ktyfUL._SL1500_.jpg",
+      "price": "10.73$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 3,
+      "name": "Black Rifle Coffee",
+      "country": "Kenya",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91vwF6Kh8IL._SX522_.jpg",
+      "price": "19.75$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 4,
+      "name": "Presto Coffee Beans 1 kg",
+      "country": "Columbia",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91Ryk2gKejL._SL1500_.jpg",
+      "price": "15.99$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 5,
+      "name": "Organic Coffee One Cup",
+      "country": "Columbia",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51M2fmEXTIL.jpg",
+      "price": "24.99$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet."
+    }
+  ],
+  "goods": [
+    {
+      "id": "0",
+      "name": "Electric Spice and Coffee Grinder",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41qvqWRCm3L.jpg",
+      "price": "36.99$"
+    },
+    {
+      "id": "1",
+      "name": "Manual Coffee Grinder",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91gR5HFtmaL._SL1500_.jpg",
+      "price": "25.99$"
+    },
+    {
+      "id": 2,
+      "name": "Coffee Cup with Lid",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71L5Ut1HHSL._SL1500_.jpg",
+      "price": "15.99$"
+    },
+    {
+      "id": 3,
+      "name": "Pour Over Coffee Maker",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/916TPwGqfML._SL1500_.jpg",
+      "price": "45.99$"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "dd9d",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "ccccccc"
+    },
+    {
+      "id": "8e67",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "fefreefw"
+    },
+    {
+      "id": "9314",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "fefreefw"
+    },
+    {
+      "id": "3d55",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dsfdsfds"
+    },
+    {
+      "id": "e8b7",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "gfdsde"
+    },
+    {
+      "id": "f466",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dffdgfd"
+    },
+    {
+      "id": "40ca",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dfdfdfds"
+    },
+    {
+      "id": "55b6",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dffdfds"
+    },
+    {
+      "id": "6b26",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "fdsfds"
+    },
+    {
+      "id": "99d7",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "ffffff"
+    },
+    {
+      "id": "1305",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "fsfdsfs"
+    },
+    {
+      "id": "9949",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "ffffff"
+    },
+    {
+      "id": "4a53",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "fffffff"
+    },
+    {
+      "id": "b84f",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dddddd"
+    },
+    {
+      "id": "880f",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "ffffff"
+    },
+    {
+      "id": "9412",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dddddd"
+    },
+    {
+      "id": "61eb",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "ddddddd"
+    },
+    {
+      "id": "117d",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "gggggg"
+    },
+    {
+      "id": "9bbc",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "gggggg"
+    },
+    {
+      "id": "65a7",
+      "name": "2",
+      "email": "ryzhena@list.ru",
+      "phone": "89857200633",
+      "message": "dddddd"
+    }
+  ]
+}

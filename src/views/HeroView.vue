@@ -99,6 +99,13 @@ export default {
       return this.$store.getters["getBestsellersCards"];
     },
   },
+  mounted() {
+    fetch("http://localhost:3000/bestsellers")
+      .then((res) => res.json())
+      .then((data) => {
+        this.$store.dispatch("setBestsellersData", data);
+      });
+  },
   methods: {
     smoothScroll() {
       scrollIntoView(this.$refs.ourBest, {

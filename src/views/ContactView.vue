@@ -125,6 +125,7 @@
                 <div class="col">
                   <button class="btn btn-outline-dark send-btn">Send us</button>
                 </div>
+                {{ v$ }}
               </div>
             </form>
           </div>
@@ -179,7 +180,30 @@ export default {
       const isFormCorrect = await this.v$.$validate();
       // you can show some extra alert to the user or just leave the each field to show it's `$errors`.
       if (!isFormCorrect) return;
-      // actually submit form
+
+      const message = {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.message,
+      };
+
+      fetch("http://localhost:3000/contacts", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/JSON",
+        },
+        body: JSON.stringify(message),
+      });
+
+      this.name = "";
+      this.email = "";
+      this.phone = "";
+      this.message = "";
+      this.v$.$dirty = false; //"$error": false
+      this.v$.$errors = null;
+      this.v$.phone.$errors = null;
+      this.v$.name.$errors = null;
     },
   },
 };
